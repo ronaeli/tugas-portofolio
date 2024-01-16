@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.navbar{
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-nav li.nav-item a.nav-link{
+    position: relative;
+    margin-left: 10px;
+    color: #000;
+}
+
+.navbar-nav li.nav-item a.nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffc107; 
+    transform: translateX(-50%); 
+    transition: 0.3s ease-in-out; 
+    visibility: hidden;
+}
+
+.navbar-nav li.nav-item a.nav-link:hover:before{
+    width: 100%;
+    visibility: visible;
+}
+
+
+h1{
+    font-family: 'Dancing Script', cursive;
+}
+
+.carousel-item img{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content-card{
+    /* background-color: red; */
+    margin-bottom: 20px;
+    overflow-x: hidden;
+}
+
+/* .container-map{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.detail-alamat{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+} */
+
+.contac {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; Set minimum height to full viewport height */
+    /* text-align: center; Optional: Center align text */
+  }
+  
+.container-contac{
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 20px;
+    /* background-color: red;
+    width: 60%; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffc107;
+    width: 100%;
+    height: 50px;
+    
+}
+  
+  
+@media only screen and (max-width:600px){
+    .container-contac{
+        width: 100%;
+    }
+    .container-map,
+    .detail-alamat {
+      margin-bottom: 20px; /* Atur jarak antara peta dan detail alamat */
+    }
+}
